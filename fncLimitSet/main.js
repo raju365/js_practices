@@ -7,6 +7,9 @@ return function(){
         totalCalled++;
         fn();
     }
+    else{
+        console.log('limit exceeded')
+    }
 
 }
 
