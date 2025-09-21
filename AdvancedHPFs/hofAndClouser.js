@@ -6,6 +6,9 @@ function onlyOneCaller(callback) { //accept a callback function as parameter
             executed = true; //set executed to true
             callback(); //call the callback function
         }
+        else{
+            console.log("function already called once");
+        }
     }
 }
 
