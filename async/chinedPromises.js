@@ -6,14 +6,42 @@
 
 function getUser(){
     return new Promise((res, rej)=>{
-        res({id:1, name:"harsh"})
+        setTimeout(() =>{
+            res({id:1, name:"harsh"})
+
+        },1000)
     })
 }
 function getPosts(userId){
     return new Promise((res, rej)=>{
-        res(["title1", "title2"])
+        setTimeout(()=>{
+            res(["title1", "title2"])
+
+        },1000)
     })
 }
-getUser().then(function(data){
-    console.log(`data fetched : ${data.name}`);
+
+function getComments(postId){
+    return new Promise((res, rej)=>{
+        setTimeout(()=>{
+            res(["great post","amazing content","tou rocked"])
+        },1000)
+    })
+}
+
+getUser()
+.then(function(data){
+    console.log("user data", data)
+   return getPosts(data.id)
+
+})
+.then(function(titles){
+    console.log("posts titles", titles)
+    return getComments("kya hal hai")
+})
+.then(function(comments){
+    console.log("comments", comments)
+})
+.finally(()=>{
+    console.log("operation completed")
 })
