@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>GitHub User Finder</title>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+    <div class="w-full max-w-2xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-900 tracking-tight">GitHub User Search</h1>
+        <p class="text-gray-500 mt-2">Search any GitHub profile and display the details beautifully.</p>
+      </div>
+
+      <!-- Search Box -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-200 mb-8">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+          <input
+            type="text"
+            placeholder="Enter GitHub username..."
+            class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-black focus:outline-none text-gray-800 placeholder-gray-400"
+          />
+          <button
+            class="px-6 py-3 bg-black text-white rounded-xl font-semibold tracking-wide hover:bg-gray-900 transition"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Result Card Placeholder -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="animate-pulse text-center text-gray-400">
+          GitHub user info will appear here.
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
