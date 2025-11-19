@@ -3,7 +3,7 @@ let usernameInput = document.querySelector('.usernameInput')
 let searchBtn = document.querySelector('.searchBtn')
 let card = document.querySelector('.card')
 
-getUserProfileData = (username) =>{
+const getUserProfileData = (username) =>{
     return fetch(`https://api.github.com/users/${username}`)
     .then((rowData)=>{
             if(!rowData.ok) throw new Error('User not found')
@@ -13,7 +13,7 @@ getUserProfileData = (username) =>{
 }
 
 
-getRepos = (username) =>{
+const getRepos = (username) =>{
     return fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
     .then((rowData)=>{
         if(!rowData.ok) throw new Error('User repos not found')
@@ -23,7 +23,7 @@ getRepos = (username) =>{
     
 }
 
-decorateProfileData =(details) =>{
+const decorateProfileData =(details) =>{
     console.log(details);
     
     let profileDiv = `<div class="flex flex-col md:flex-row items-center gap-6">
